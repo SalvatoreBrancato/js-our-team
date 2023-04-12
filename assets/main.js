@@ -40,7 +40,7 @@ for (let i = 0; i < team.length; i++) {
    console.log(singoloMembro[`role`])
    
    document.getElementById(`container`).innerHTML += `
-   <div class="card" style="width: 18rem;">
+   <div id="card" class="card" style="width: 18rem;">
         <img src="./img/${singoloMembro[`image`]}" class="card-img-top" alt="...">
         <div class="card-body">
             <h3 >${(singoloMembro[`name`])}</h3>
