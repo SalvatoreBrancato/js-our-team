@@ -32,25 +32,26 @@ const team = [
   ];
 
 
-
-// BONUS 1:
-// Trasformare la stringa foto in una immagine effettiva
-// BONUS 2:
-// Organizzare i singoli membri in card/schede
-// Consigli del giorno:
-// Ragioniamo come sempre a step.
-// Prima la logica in italiano e poi traduciamo in codice.
-// E ricordiamoci che console.log() è nostro amico!
 for (let i = 0; i < team.length; i++) {
   
   //MILESTONE 1 - 2
    let singoloMembro = (team[i])
    console.log(singoloMembro[`name`])
    console.log(singoloMembro[`role`])
-   document.getElementById(`lista-membri`).innerHTML += `<li>${(singoloMembro[`name`])}, ${(singoloMembro[`role`])}</li>`
+   
+   document.getElementById(`container`).innerHTML += `
+   <div class="card" style="width: 18rem;">
+        <img src="./img/${singoloMembro[`image`]}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h3 >${(singoloMembro[`name`])}</h3>
+            <span>${(singoloMembro[`role`])}</span>
+        </div>
+    </div>
+   ` 
+}
 
-  
-  // for(let key in singoloMembro){
+//`<li>${(singoloMembro[`name`])}, ${(singoloMembro[`role`])}</li>`
+
+ // for(let key in singoloMembro){
   //   console.log(singoloMembro[key])
   // }
-}
